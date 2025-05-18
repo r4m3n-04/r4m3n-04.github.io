@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+ <style>
+                                         /* Landing Page*/
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+    .announcement-bar {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+    }
+
+    .cart {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+
+
+/*style sa steps*/
+
+     body {
+      font-family: "Poppins", sans-serif;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .header-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .text-section {
+      flex: 1 1 300px;
+    }
+
+    .text-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .image-wrapper {
+      position: relative;
+      flex: 1 1 300px;
+      padding: 1rem;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 2;
+    }
+
+    .image-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      width: 100%;
+      height: 100%;
+      background-color: #e3f0da;
+      border-radius: 1rem;
+      z-index: 1;
+    }
+
+    .steps {
+      margin-top: 2rem;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .step-dot {
+      width: 12px;
+      height: 12px;
+      background-color: #b5dfaa;
+      border-radius: 50%;
+      margin-top: 0.5rem;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .step p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .step b {
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .header-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image-wrapper::after {
+        top: 0.75rem;
+        left: 0.75rem;
+      }
+    }
+    </style>
+<body>
+   <div class="announcement-bar">
+    Get Your Self-Watering Plant pot Today!
+  </div>
+
+  <header>
+    <div class="logo">THRIVEPOT</div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="index.html#features">FEATURES</a>
+      <a href="index.html#pricing">PRICING</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="#">EXPLORE</a> 
+      <div class="cart">
+        <span>🌐 PHIL</span>
+        <span>🛒<sup>1</sup></span>
+      </div>
+    </nav>
+  </header>
+<br>
+  <div class="container">
+    <div class="header-section">
+      <div class="text-section">
+        <h2>HOW TO SET UP THE THRIVEPOT?</h2>
+      </div>
+      <div class="image-wrapper">
+        <img src="PICS FOR WEBSITE/SET UP PIC.png" alt="ThrivePot">
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-dot"></div>
+        <p><b>Step 1:</b> Fill the wicking cloth with soil and insert them into the allotted sections of the inner body.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <p><b>Step 2:</b> Cover the bottom with wicking cloth then fill the rest of the inner body with soil.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <p><b>Step 3:</b> Make space for your plant and ready it for potting.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <p><b>Step 4:</b> Pot your chosen indoor plant into the Product.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <p><b>Step 5:</b> Pour 12 liters of water into the water reservoir.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <p><b>Step 6:</b> Check the water level indicator and see if it reaches full, once it reaches full the sound of the buzzer will automatically trigger.</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
