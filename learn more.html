@@ -3,65 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ThrivePot</title>
-</head>
- <style>
-                                         /* Landing Page*/
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      color: #333;
-    }
-
-    .announcement-bar {
-      background-color: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 8px;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-    }
-
-    .cart {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-
-
-/*style sa steps*/
-
+  <title>What is ThrivePot?</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
     .container {
       max-width: 1100px;
       margin: auto;
@@ -70,6 +14,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
+      padding: 2rem;
     }
 
     .text-section {
@@ -115,40 +60,32 @@
         margin-left: auto;
         margin-right: auto;
       }
-
-      .image-wrapper::after {
-        top: 0.75rem;
-        left: 0.75rem;
-      }
     }
+  </style>
+</head>
 
- </style>
-
- <body>
-   <div class="announcement-bar">
+<body>
+  <div class="announcement-bar">
     Get Your Self-Watering Plant pot Today!
   </div>
 
-  <header>
-    <div>
-      <img SRC="PICS SA WEBSITE/THRIVEPOT WEBSITE.png" height="40px">
+<header>
+  <div>
+    <img SRC="images/THRIVEPOT WEBSITE.png" height="40px">
+  </div>
+  <nav>
+    <a href="index.html#">HOME</a>
+    <a href="index.html#features">FEATURES</a>
+    <a href="index.html#pricing">PRICING</a>
+    <a href="index.html#faq">FAQ</a>
+    <div class="cart">
+      <span>🌐 PHIL</span>
+      <span>🛒<sup>1</sup></span>
     </div>
-    <nav>
-      <a href="index.html#">HOME</a>
-      <a href="index.html#features">FEATURES</a>
-      <a href="index.html#pricing">PRICING</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="#">EXPLORE</a>
-      <div class="cart">
-        <span>🌐 PHIL</span>
-        <span>🛒<sup>1</sup></span>
-      </div>
-    </nav>
-  </header>
-  <br>
-  <br>
-  <br>
-<div class="container">
+  </nav>
+</header>
+
+<section class="container">
     <div class="text-section">
       <h2>WHAT IS<br>THRIVEPOT?</h2>
       <p>
@@ -156,8 +93,9 @@
       </p>
     </div>
     <div class="image-wrapper">
-      <img src="PICS SA WEBSITE/learn more.png" alt="ThrivePot Image">
+      <img src="images/learn more.png" alt="ThrivePot Image">
     </div>
-  </div>
-  </body>
-  </html>
+</section>
+
+</body>
+</html>
