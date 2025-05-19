@@ -4,486 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ThrivePot</title>
+  <link rel="stylesheet" href="style.css">     
   <style>
-                                         /* Landing Page*/
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      color: #333;
-    }
-
-    .announcement-bar {
-      background-color: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 8px;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-    }
-
-    .cart {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .hero {
+        .hero {
       position: relative;
       width: 100%;
       height: 90vh;
-      background: url("PICS SA WEBSITE/Landing Page.png") no-repeat center center/cover;
+      background: url("images/Landing Page.png") no-repeat center center/cover;
     }
 
-    .hero-content {
-      position: absolute;
-      top: 50%;
-      left: 10%;
-      transform: translateY(-50%);
-      color: #fff;
-    }
-
-    .hero-content h1 {
-      font-size: 4rem;
-      color: #2e7d32;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .hero-content p {
-      font-size: 1.3rem;
-      margin: 10px 0;
-    }
-
-    .hero-content .btn {
-      margin-top: 20px;
-      background-color: #8bc34a;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-      transition:  0.3s;
-    }
-
-    .hero-content .btn:hover {
-      background-color: #7cb342;
-    }
-
-    @media (max-width: 768px) {
-      .hero-content h1 {
-        font-size: 2.5rem;
-      }
-      .hero-content {
-        left: 5%;
-      }
-      nav {
-        gap: 1rem;
-        font-size: 0.9rem;
-      }
-    }
-                                   /* How do self watering plant pot ? */
-
-    h1 {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 24px;
-      color: #1c1c1c;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .card {
-      background-color: #eaf3e5;
-      border-radius: 12px;
-      padding: 20px;
-      display: flex;
-      gap: 15px;
-      align-items: flex-start;
-    }
-
-    .card img {
-      width: 100px;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .card.full {
-      grid-column: span 2;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .card.full img {
-      width: 150px;
-      margin-right: 20px;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 1.1rem;
-      color: #222;
-    }
-
-    .card p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    .button-wrapper {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .setup-button{
-      background-color: #8cc63f;
-      color: white;
-      padding: 14px 28px;
-      border: none;
-      border-radius: 25px;
-      font-size: 1rem;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .setup-button:hover {
-      background-color: #76b52f;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-
-      .card.full {
-        flex-direction: column;
-      }
-
-      .card.full img {
-        margin: 0 0 20px;
-        width: 100%;
-        max-width: 150px;
-      }
-    }
-    
-                                         /* Features */
-
-
-    .features-section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .features-section h1 {
-      font-size: 24px;
-      letter-spacing: 1px;
-      margin-bottom: 30px;
-    }
-
-    .features-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 80px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .feature-card {
-      background-color: white;
-      border-radius: 12px;
-      width: 250px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .feature-card img {
-      width: 100%;
-      height: 150px;
-      align-content: center;
-      object-fit: cover;
-      border-bottom: 5px solid #228140;
-    }
-
-    .feature-card h3 {
-      margin: 10px 0 5px;
-      font-size: 16px;
-    }
-
-    .feature-card p {
-      font-size: 13px;
-      padding: 0 10px 15px;
-    }
-                                            /* BUY NOW SECTION */
     .product-section {
-      background-color: white;
-      margin-top: 40px;
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-    }
-    .product-section img {
-      width: 350px;
-      border-radius: 12px;
-    }
-    .product-info {
-      max-width: 400px;
-    }
-    .product-info h2 {
-      margin: 0;
-      font-size: 20px;
-      color: #444;
-    }
-    .product-info p {
-      font-size: 14px;
-      margin: 10px 0 20px;
-      line-height: 1.5;
-    }
-    .price {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-    .price del {
-      color: red;
-      margin-right: 10px;
-    }
-    .buy-button {
-      background-color: #6cbf47;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 20px;
-      font-size: 16px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .buy-button:hover {
-      background-color: #5aa83a;
-    }
-                                                           /* FAQ */
-
-                                              /* Scoped FAQ Section Styles */
-.faq-section {
-  margin: auto;
-  padding: 5px 40px;
-  max-width: 1200px;
-}
-
-.faq-title {
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 80px;
-  letter-spacing: 1px;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.faq-box {
-  background: #f2f2f2;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
+  background-color: white;
+  margin-top: 40px;
+  padding: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  gap: 40px;
 }
 
-.faq-img {
- width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
+.product-section img {
+  width: 350px;
+  border-radius: 12px;
 }
 
-
-.text-box {
-  padding: 20px;
-  font-size: 12px;
-  line-height: 1.6;
-  gap: 20px;
+.product-info {
+  max-width: 400px;
 }
 
-.text-box h3 {
-  margin-top: 0;
+.product-info h2 {
+  margin: auto 0;
   font-size: 20px;
+  color: #444;
 }
 
-.gray-bg {
-  background-color: #eeeeee;
+.product-info p {
+  font-size: 14px;
+  margin: 10px 0 20px;
+  line-height: 1.5;
 }
 
-.green-bg {
-  background-color: #dcebdc;
+.price {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.features-background {
-  background-color: rgba(137, 195, 63, 0.3);
+.price del {
+  color: red;
+  margin-right: 10px;
 }
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-                                                          /* MEMBERS */
-
-    h2 {
-      margin-top: 50px;
-      font-size: 24px;
-      letter-spacing: 1px;
-    }
-
-    .team-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    gap: 94px;
-    justify-items: center;
-    padding: 10px 0px;
-    max-width: 1000px;
-    margin: 0 auto;
-    }
-
-    .team-container2{
-      grid-column: 1 / -1; 
-      display: flex; 
-      justify-content: center; 
-      padding: 40px 0px;
-      gap: 220px;
-     } 
-
-    .member {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-
-    .member img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 70%;
-      margin-bottom: 10px;
-      background-color: rgba(137, 195, 63, 0.3);
-    }
-
-    .member p {
-      margin: 0;
-      font-size: 14px;
-    }
-
-    .icons-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      padding: 90px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .icon-block {
-      text-align: center;
-      padding: 100px -10px;
-    }
-
-    .icon-block img {
-      height: 40px;
-      margin-bottom: 10px;
-    }
-
-    .icon-block h4 {
-      margin: 10px 0 5px;
-      font-size: 14px;
-    }
-
-    .icon-block p {
-      margin: 0;
-      font-size: 12px;
-      color: #555;
-    }
-
-    footer {
-      font-size: 12px;
-      color: #777;
-      margin: 20px 0;
-      text-align: center;
-    }
-  </style>
-
-</style>
-                                                           
+  </style>        
 </head>
-<body>
 
+<body>
   <div class="announcement-bar">
     Get Your Self-Watering Plant pot Today!
   </div>
 
   <header>
     <div>
-      <img SRC="PICS SA WEBSITE/THRIVEPOT WEBSITE.png" height="40px">
+      <img SRC="images/THRIVEPOT WEBSITE.png" height="40px" alt="ThrivePot Logo">
     </div>
     <nav>
       <a href="#">HOME</a>
       <a href="#features">FEATURES</a>
       <a href="#pricing">PRICING</a>
       <a href="#faq">FAQ</a>
-      <a href="#">EXPLORE</a>
       <div class="cart">
         <span>🌐 PHIL</span>
         <span>🛒<sup>1</sup></span>
@@ -494,26 +81,25 @@
   <section class="hero">
     <div class="hero-content">
       <h1>ThrivePot</h1>
-      <p>For thriving plants</p><br>
+      <p>Plant care is life care.</p><br>
       <a href="learn more.html" class="btn">Learn More</a>
     </div>
   </section>
-</head>
-<body>
 
-                 <h1>How does our self-watering plant pot work?</h1>
-
+  <section>
+    <h2>How does our self-watering plant pot work?</h2>
   <div class="container">
     <div class="card full">
-      <img src="PICS SA WEBSITE/effortless watering.png" height="auto" alt="Thrivepot cross-section">
+      <img src="images/effortless watering.png" height="auto" alt="Thrivepot cross-section">
       <div>
         <h3>Effortless self watering</h3>
         <p>Thrivepot keeps your garden healthy—just fill the reservoir, and plants take what they need. Real-time water levels make it set-and-forget.</p>
       </div>
     </div>
 
+    <div class="card-grid">
     <div class="card">
-      <img src="PICS SA WEBSITE/Wicking method.png" alt="Wicking method">
+      <img src="images/Wicking method.png" alt="Wicking method">
       <div>
         <h3>Wicking Method</h3>
         <p>The ThrivePot utilizes a moisture wicking fabric. The fabric draws water upwards through its pores due to surface tension and adhesion—a phenomenon called capillary action.</p>
@@ -521,189 +107,178 @@
     </div>
 
     <div class="card">
-      <img src="PICS SA WEBSITE/Accurate water level.png"  alt="Water level indicator">
+      <img src="images/Accurate water level.png"  alt="Water level indicator">
       <div>
         <h3>Accurate Water Level Indicator</h3>
         <p>Users can check the water level in real time. This gives confidence in maintenance and prevents over-watering.</p>
       </div>
     </div>
-  </div>
+    </div>
+    </div>
+    <center>
+    <div class="button-wrapper">
+      <a href="set up.html" class="setup-button">How to set up the Thrivepot?</a>
+    </div>
+    </center>
+  </section>
 
-  <div class="button-wrapper">
-    <a href="set up.html" class="setup-button">How to set up the Thrivepot?</a>
-  </div>
-  <br>
-    <br>
-   <div class="features-background">
-   <br> 
-
-                                               <h1 id="features">FEATURES</h1>
-  <br>
-  <br>
-  <br>
-<br>  
-  <div class="features-grid">
+  <section class="features-section features-background" id="features">
+   <h2>FEATURES</h2>
+   <div class="features-grid">
     <div class="feature-card">
-      <img src="PICS SA WEBSITE/water level indicator.png" alt="Water Level Indicator">
+      <img src="images/water level indicator.png" alt="Water Level Indicator">
       <h3>Water Level Indicator</h3>
       <p>The Thrivepot comes with a water level indicator that serves to inform the user on the current amount of water remaining in the reservoir. A low water level indicates that the user must fill the reservoir again.</p>
     </div>
 
     <div class="feature-card">
-      <img src="PICS SA WEBSITE/drip tray.png" alt="Drip Tray">
+      <img src="images/drip tray.png" alt="Drip Tray">
       <h3>Drip Tray</h3>
       <p>The Thrivepot comes with a clip-on drip tray, which will protect you from spills caused through over-filling. Just be mindful when you're refilling the water reservoir.</p>
     </div>
 
     <div class="feature-card">
-      <img src="PICS SA WEBSITE/water resevoir.png" alt="Water Reservoir">
+      <img src="images/water resevoir.png" alt="Water Reservoir">
       <h3>Water Reservoir</h3>
       <p>There is no need to worry with Thrivepot's water reservoir that keeps the plants healthy and watered! As long as soil is in contact with the reservoir, your plant will remain watered.</p>
     </div>
 
     <div class="feature-card">
-      <img src="PICS SA WEBSITE/drainage.png" height="auto" alt="Drainage">
+      <img src="images/drainage.png" height="auto" alt="Drainage">
       <h3>Drainage</h3>
       <p>Our self watering plant pot features a drainage system that allows water to drain easily, preventing waterlogging, with strategically-placed drainage holes and a built-in water reservoir.</p>
-      <div class="highlight-bar"></div>
     </div>
 
     <div class="feature-card">
-      <img src="PICS SA WEBSITE/wicking fabrics.png" alt="Wicking Fabric">
+      <img src="images/wicking fabrics.png" alt="Wicking Fabric">
       <h3>Wicking Fabric</h3>
       <p>Wicking fabric in plants refers to the use of materials that draw moisture from the water reservoir or source to the roots of plants, using capillary action.</p>
-      <div class="highlight-bar"></div>
     </div>
-</div>
-<br><br>
-</div>
-
-  <div class="product-section">
-    <img src="PICS SA WEBSITE/buy now.png" alt="ThrivePot">
-    <div class="product-info">
-                                  
-                                            <h2 id="pricing">The Planter Awesomeness!</h2>
-
-      <p>ThrivePot is a sleek, self-watering indoor plant pot designed for modern living. Featuring a built-in water reservoir and an easy-to-read water level indicator, ThrivePot ensures your plants receive the right amount of hydration with minimal effort. Perfect for busy lifestyles, it helps your greenery thrive effortlessly.</p>
-      <div class="price">
-        <del>₱8,000</del> ₱6,000
-      <br><br>
-      <a href="buy now.html" class="buy-button">Buy Now</a>
-      </div>
-     </div>
   </div>
+  </section>
 
-                                                                <!-- FAQ SECTION -->
- <br>
- <br>         
-
-<section class="faq-section">
-
-  <h2 class="faq-title" id="faq">FREQUENTLY ASKED QUESTIONS</h2>
-  <div class="faq-grid">
-    <!-- FAQ Item 1 -->
-    <div class="faq-box">
-      <img src="PICS SA WEBSITE/FAQ 1.png" alt="ThrivePot plant image" class="faq-img">
-    </div>
-    <div class="faq-box text-box gray-bg">
-      <h3>Will ThrivePot seriously do the watering for me?</h3>
+<section class="product-section" id="pricing">
+  <img src="images/buy now.png" alt="ThrivePot">
+  <div class="product-info">
+    <h3>The Planter Awesomeness!</h3>
+    <p>
+      ThrivePot is a sleek, self-watering indoor plant pot designed for modern living.
+      Featuring a built-in water reservoir and an easy-to-read water level indicator,
+      ThrivePot ensures your plants receive the right amount of hydration with minimal effort.
+      Perfect for busy lifestyles, it helps your greenery thrive effortlessly.
+    </p>
+    <div class="price">
+      <del>₱8,000</del> ₱6,000
       <br>
-      <p>
-        For the most part, yes it will—that’s how it’s been designed! ThrivePot features an integrated water reservoir, which plants draw from automatically. So in general, all you need to do is keep this adequately topped up (the water level indicator will tell you when it’s time to replenish).
-      </p>
-    </div>
-    <div class="faq-box">
-      <img src="PICS SA WEBSITE/FAQ 2.png" alt="ThrivePot setup image" class="faq-img">
-    </div>
-    <div class="faq-box text-box gray-bg">
-      <h3>Do I have to worry about my ThrivePot leaking?</h3>
-        <br>
-      <p>
-        The ThrivePot comes with a clip-on drip tray, which will protect you from spills caused through over-filling. Just be mindful when you’re refilling the water reservoir.
-      </p>
-    </div>
-
-    <!-- FAQ Item 2 -->
-    <div class="faq-box green-bg text-box">
-      <h3>How to set up the ThrivePot?</h3>
-        <br>
-      <p>
-        Setting up your ThrivePot is quick and simple! Just fill the water reservoir at the bottom, place your plant in the pot, and ensure the roots are properly positioned. The built-in water level indicator will help you monitor hydration, while the drainage system keeps roots healthy.
-      </p>
-    </div>
-    <div class="faq-box">
-      <img src="PICS SA WEBSITE/FAQ 3.png" alt="Wooden stand" class="faq-img">
-    </div>
-    <div class="faq-box green-bg text-box">
-      <h3>Is ThrivePot easy to maintain?</h3>
-        <br>
-      <p>
-        Our plant pot is designed for effortless maintenance, with a self-watering system that reduces the need for constant attention. The easy-to-read water level indicator ensures you never overwater, while the removable tray and simple drainage system make cleaning a breeze. Keep your plants happy with minimal effort!
-      </p>
-    </div>
-    <div class="faq-box">
-      <img src="PICS SA WEBSITE/FAQ 4.png" alt="ThrivePot side view" class="faq-img">
+      <a href="buy-now.html" class="buy-button">Buy Now</a>
     </div>
   </div>
 </section>
-<br>
-<br>
- <h1>OUR TEAM</h1>
-<br>
-  <div class="team-container">
-    <div class="member">
-      <img src="PICS SA WEBSITE/andrade.png" alt="Christina Marie Andrade">
-      <p>Christina Marie Andrade</p>
-    </div>
-    <div class="member">
-      <img src="PICS SA WEBSITE/bautista.png" alt="Amelia Isabel Bautista">
-      <p>Amelia Isabel Bautista</p>
-    </div>
-    <div class="member">
-      <img src="PICS SA WEBSITE/basay.png" alt="Christian Basay">
-      <p>Christian Basay</p>
-    </div>
-    </div>
-  <div class="team-container2">
-    <div class="member">
-      <img src="PICS SA WEBSITE/booc.png" alt="Blessy Simone Booc">
-      <p>Blessy Simone Booc</p>
-    </div>
-    <div class="member">
-      <img src="PICS SA WEBSITE/dano.png" alt="Kurt Christopher Dano">
-      <p>Kurt Christopher Dano</p>
-    </div>
-    </div>
-  </div>
 
-  <div class="icons-section">
+  <section class="faq-section"  id="faq">
+    <h2 class="faq-title">FREQUENTLY ASKED QUESTIONS</h2>
+    <div class="faq-grid">
+      <div class="faq-box">
+       <img src="images/FAQ 1.png" alt="ThrivePot plant image" class="faq-img">
+      </div>
+
+      <div class="faq-box-text text-box gray-bg">
+      <h3>Will ThrivePot seriously do the watering for me?</h3>
+        <p>
+          For the most part, yes it will—that’s how it’s been designed! ThrivePot features an integrated water reservoir, which plants draw from automatically. So in general, all you need to do is keep this adequately topped up (the water level indicator will tell you when it’s time to replenish).
+        </p>
+      </div>
+
+      <div class="faq-box">
+        <img src="images/FAQ 2.png" alt="ThrivePot setup image" class="faq-img">
+      </div>
+
+      <div class="faq-box-text text-box gray-bg">
+        <h3>Do I have to worry about my ThrivePot leaking?</h3>
+        <p>
+          The ThrivePot comes with a clip-on drip tray, which will protect you from spills caused through over-filling. Just be mindful when you’re refilling the water reservoir.
+        </p>
+      </div>
+
+      <div class="faq-box-text green-bg text-box">
+        <h3>How to set up the ThrivePot?</h3>
+        <p>
+          Setting up your ThrivePot is quick and simple! Just fill the water reservoir at the bottom, place your plant in the pot, and ensure the roots are properly positioned. The built-in water level indicator will help you monitor hydration, while the drainage system keeps roots healthy.
+        </p>
+      </div>
+    
+      <div class="faq-box">
+         <img src="images/FAQ 3.png" alt="Wooden stand" class="faq-img">
+      </div>
+
+      <div class="faq-box-text green-bg text-box">
+        <h3>Is ThrivePot easy to maintain?</h3>
+        <p>
+          Our plant pot is designed for effortless maintenance, with a self-watering system that reduces the need for constant attention. The easy-to-read water level indicator ensures you never overwater, while the removable tray and simple drainage system make cleaning a breeze. Keep your plants happy with minimal effort!
+        </p>
+      </div>
+    
+      <div class="faq-box">
+        <img src="images/FAQ 4.png" alt="ThrivePot side view" class="faq-img">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>OUR TEAM</h2>
+    <div class="team-container">
+      <div class="member">
+        <img src="images/andrade.png" alt="Christina Marie Andrade">
+         <p>Christina Marie Andrade</p>
+      </div>
+
+      <div class="member">
+        <img src="images/bautista.png" alt="Amelia Isabel Bautista">
+        <p>Amelia Isabel Bautista</p>
+      </div>
+    
+      <div class="member">
+        <img src="images/basay.png" alt="Christian Basay">
+        <p>Christian Basay</p>
+      </div>
+    </div>
+    <div class="team-container2">
+      <div class="member">
+        <img src="images/booc.png" alt="Blessy Simone Booc">
+        <p>Blessy Simone Booc</p>
+      </div>
+      <div class="member">
+        <img src="images/dano.png" alt="Kurt Christopher Daño">
+        <p>Kurt Christopher Daño</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="icons-section">
     <div class="icon-block">
-      <img src="PICS SA WEBSITE/security icon.png" alt="Security Icon">
+      <img src="images/security icon.png" alt="Security Icon">
       <h4>Watertight Security</h4>
       <p>We promise a secure checkout with protected personal details</p>
     </div>
     <div class="icon-block">
-      <img src="PICS SA WEBSITE/refund icon.png" alt="Money Back Icon">
+      <img src="images/refund icon.png" alt="Money Back Icon">
       <h4>Money Back Guarantee</h4>
       <p>Not satisfied? Return your Thrivepot planter in 30 days for a full refund</p>
     </div>
     <div class="icon-block">
-      <img src="PICS SA WEBSITE/warranty icon.png" alt="Warranty Icon">
+      <img src="images/warranty icon.png" alt="Warranty Icon">
       <h4>12-month Warranty</h4>
       <p>If your planter goes wrong within 12 months, we'll replace it for free</p>
     </div>
     <div class="icon-block">
-      <img src="PICS SA WEBSITE/cause icon.png" alt="Cause Icon">
+      <img src="images/cause icon.png" alt="Cause Icon">
       <h4>Cultivation for a Cause</h4>
       <p>Every ThrivePot sold provides 5 meals to those in need through SecondBite</p>
     </div>
-  </div>
+  </section>
 
   <footer>
     © 2025, ThrivePot. All Rights Reserved.
   </footer>
-
-
 </body>
-
 </html>
