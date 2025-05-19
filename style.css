@@ -1,0 +1,405 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: no-repeat center center/cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  color: #2e7d32;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin: 5px 0;
+}
+
+.btn,  .buy-button{
+  display: inline-block;
+  background-color: #8bc34a;
+  color: white;
+  margin: 15px 0px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.setup-button {
+  display: inline-block;
+  background-color: #8bc34a;
+  color: white;
+  margin: 2rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover, .setup-button:hover, .buy-button:hover {
+  background-color: #7cb342;
+}
+
+
+
+    .card {
+      background-color: #eaf3e5;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .card img {
+      width: 100px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .card.full {
+      grid-column: span 2;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card.full img {
+      width: 150px;
+      margin-right: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content {
+    left: 5%;
+  }
+  nav {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+.container {
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+}
+
+/* Sections */
+section {
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-section {
+  flex: 1 1 400px;
+}
+
+.image-wrapper {
+  position: relative;
+  flex: 1 1 400px;
+  padding: 1rem;
+}
+
+.image-wrapper img {
+  border-radius: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Steps Section */
+.steps {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.step-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #b5dfaa;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+/* Features */
+.features-section {
+  text-align: center;
+  background-color: rgba(137, 195, 63, 0.3);
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 5px solid #228140;
+}
+
+.feature-card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.feature-card p {
+  font-size: 13px;
+  padding: 0 10px 15px;
+}
+
+/* FAQ */
+.faq-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 4rem;
+  letter-spacing: 1px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.faq-box {
+  background: #f2f2f2;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.faq-box-text {
+  background: #f2f2f2;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+}
+
+.faq-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-box h3 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.gray-bg {
+  background-color: #eeeeee;
+}
+
+.green-bg {
+  background-color: #dcebdc;
+}
+
+/* Team */
+.team-container, .team-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 2rem;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.member img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: rgba(137, 195, 63, 0.3);
+}
+
+.member p {
+  font-size: 14px;
+}
+
+/* Icons */
+.icons-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 90px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icon-block img {
+  display: block;
+  margin: 0 auto;
+  height: 40px;
+}
+
+.icon-block h4 {
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+
+.icon-block p {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  font-size: 12px;
+  color: #777;
+  margin: 20px 0;
+  text-align: center;
+}
